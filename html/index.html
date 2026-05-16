@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>ArchiveBook</title>
+    <!-- Исправили stylesheet и добавили кавычки для пути -->
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+</head>
+<body>
+    <header>
+        <div class="h1-s">
+            <center>
+                <h1>ArchiveBook</h1>
+            </center>
+        </div>
+    </header>
+    <center>
+        <form method="post">
+            {% csrf_token %}
+            <div class="sc">
+                <!-- Поле для ввода названия (например, "уравнения") -->
+                <input type="text" name="pos" class="poisk" placeholder="Что ищем?">
+                
+                <!-- Поле с выбором категории (из datalist) -->
+                <input type="text" name="typ" class="poisk" list="topics-list" placeholder="Категория">
+            </div>
+
+            <datalist id="topics-list">
+                {%for i in lp%}
+                    <option value="{{i}}">
+                {%endfor%}
+            </datalist>
+            <br>
+            <button type="submit">Поиск</button>
+        </form>
+    </center>
+    {% block content %}
+        
+    {% endblock %}
+</body>
+</html>

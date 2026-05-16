@@ -1,0 +1,29 @@
+{% extends 'index.html' %}
+{% block content %}
+    <center>
+        {% if files %}
+            <table class="simple-table">
+                <thead>
+                    <tr>
+                        <th>Тема конспекта</th>
+                        <th>Файл</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for file in files %}
+                    <tr>
+                        <td>{{ file }}</td>
+                        <td>
+                            <button type="button" onclick="window.location.href='/media/notes/{{typ}}/{{ file|urlencode }}'">Читать</button>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% else %}
+            <p>Ничего не найдено</p>
+        {% endif %}
+    </center>
+    <br>
+    <center><button onclick="window.location.href='/'">В главную</button></center>
+{% endblock %}
