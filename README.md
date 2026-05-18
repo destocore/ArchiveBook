@@ -67,11 +67,11 @@
    ```bash
    git clone https://github.com/destocore/ArchiveBook.git
    ```
-2. Установите зависимости (Django):
+2. Установите зависимости:
    ```bash
    pip install -r pip.txt
    ```
-3. Запустите сервер:
+3. Запустите сервер (через батник или через команду):
    ```bash
    python manage.py runserver
    ```
@@ -83,11 +83,11 @@
    ```bash
    git clone https://github.com/destocore/ArchiveBook.git
    ```
-2. Установите зависимости (Django):
+2. Установите зависимости:
    ```bash
    pip3 install -r pip.txt
    ```
-3. Запустите сервер:
+3. Запустите сервер (через sh скрипт или через команду):
    ```bash
    python3 manage.py runserver
    ```
