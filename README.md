@@ -73,9 +73,9 @@
    ```
 3. Запустите сервер (через батник или через команду):
    ```bash
-   python manage.py runserver
+   waitress-serve --listen=0.0.0.0:80 ArchiveBook.wsgi:application
    ```
-4. Откройте в браузере: `http://127.0.0.1:8000`
+4. Откройте в браузере: `http://127.0.0.1:80`
 
 ## Linux / MacOS / BSD
 
@@ -89,9 +89,9 @@
    ```
 3. Запустите сервер (через sh скрипт или через команду):
    ```bash
-   python3 manage.py runserver
+   waitress-serve --listen=0.0.0.0:80 ArchiveBook.wsgi:application
    ```
-4. Откройте в браузере: `http://127.0.0.1:8000`
+4. Откройте в браузере: `http://127.0.0.1:80`
 
 ## Docker
 
